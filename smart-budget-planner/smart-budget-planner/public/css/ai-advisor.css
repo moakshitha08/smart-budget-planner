@@ -1,0 +1,218 @@
+/* AI Budget Advisor Styles */
+.ai-advisor-section {
+    margin-top: 30px;
+}
+
+.ai-advisor-section .card {
+    border: 2px solid var(--primary-light);
+}
+
+.ai-input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#aiQuestion {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    background: var(--card-bg);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 100px;
+    transition: var(--transition);
+}
+
+#aiQuestion:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.15);
+}
+
+/* Enhanced Sandbox Styles */
+.sandbox-info-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.sandbox-data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    font-size: 1rem;
+}
+
+.sandbox-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.metric-card {
+    background: var(--primary-light);
+    padding: 20px 15px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid var(--glass-border);
+}
+
+.metric-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.goal-progress-section {
+    background: var(--glass-bg);
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    margin: 25px 0;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.sandbox-progress {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 3px;
+}
+
+.progress-bar {
+    background: var(--glass-border);
+    height: 12px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--success-color), var(--primary-color));
+    transition: width 0.8s ease-in-out;
+}
+
+.sandbox-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.ai-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.ai-actions .btn {
+    flex: 1;
+}
+
+.ai-results.hidden, .sandbox-results.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.input-error {
+    color: var(--danger-color);
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+.required {
+    color: var(--danger-color);
+}
+
+.ai-response-card {
+    background: linear-gradient(135deg, var(--primary-light), var(--glass-bg));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.ai-response-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.ai-response-header i {
+    font-size: 1.4rem;
+    background: var(--primary-color);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai-answer {
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-size: 1rem;
+}
+
+.ai-answer strong {
+    color: var(--primary-color);
+}
+
+.ai-answer .key-metric {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(5, 150, 105, 0.1);
+    padding: 6px 12px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    margin: 4px 2px;
+}
+
+.status.good {
+    color: var(--success-color);
+    font-weight: 700;
+}
+
+.status.bad {
+    color: var(--danger-color);
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .ai-actions {
+        flex-direction: column;
+    }
+    
+    .ai-input-container {
+        margin-bottom: 15px;
+    }
+}
